@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JilaniSchool</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/svg+xml" />
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- 
+    - preload images
+  -->
+  <!-- <link rel="preload" as="image" href="./assets/images/hero-banner.png" />
+   -->
+</head>
+
+<body id="top">
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+      <h1>
+        <a href="#" class="logo">JilaniSchool</a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="#" class="logo">JilaniSchool</a>
+
+          <button class="nav-close-btn" aria-label="Close menu" data-nav-toggler>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="#about" class="navbar-link" data-nav-toggler>About Us</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="pricing.html" class="navbar-link " target="_self" data-nav-toggler>Pricing</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="courses.html" class="navbar-link" target="_self" data-nav-toggler>courses</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#community" class="navbar-link" data-nav-toggler>Community</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="courses.html" class="header-action-btn login-btn" target="_self">
+          <ion-icon name="person-add-outline" aria-hidden="true"></ion-icon>
+          <span class="span">Study now</span>
+        </a>
+
+        <button class="header-action-btn nav-open-btn" aria-label="Open menu" data-nav-toggler>
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+      </div>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+  <!-- 
+        - #HERO
+      -->
+
+
+  <section class="hero" id="home" aria-label="hero" style="background-image: url('./assets/images/no_image_right_now')">
+    <div class="container">
+      <div class="hero-content">
+        <h2 class="h1 hero-title">Learn Tech Skills<br> with <b style="color: #894dff;">Curated</b> Content</h2>
+        </h2>
+
+        <p class="hero-text">
+          Access hand-picked courses, notes, <br>peer community to boost your tech skills.
+        </p>
+
+        <a href="pricing.html" class="btn btn-primary" target="_self">
+          <span class="span">Register now</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- 
+        - #Hero end
+      -->
+  <!-- Marquee Section -->
+  <section class="marquee-section">
+    <div class="marquee-container">
+      <div class="marquee-content">
+        <span class="marquee-text">
+          <i class="fas fa-lightbulb"></i> Curated YouTube courses,
+          <i class="fas fa-book"></i> Access organized notes, Quezes & Assignments,
+          <i class="fas fa-users"></i> Learning with peer-to-peer community
+          <i class="fas fa-rocket"></i> Stay ahead in AI, Data, Cloud & Web Dev
+          <i class="fas fa-graduation-cap"></i> Affordable learning at just ₹199/month
+        </span>
+
+      </div>
+    </div>
+  </section>
+  <!-- 
+        - #ABOUT
+      -->
+  <section id="about">
+    <div class="container" style="margin-top: 30px; margin-bottom: 30px;">
+      <div class="section-header">
+        <h1 style="font-size:30px; color:black;">Why Choose <b style="color: #894dff;">Us</b>?</h1>
+        <p style="font-size: 17px;">Simple, affordable, and effective way to learn tech skills</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-play-circle"></i>
+          </div>
+          <h3 id="card-heading">Curated Courses</h3>
+          <div class="divider"></div>
+          <p id="card-paragraph">Hand-picked YouTube videos organized into clear learning paths.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-book"></i>
+          </div>
+          <h3 id="card-heading">Easy Notes</h3>
+          <div class="divider"></div>
+          <p id="card-paragraph">Get simple notes for every video to save time and revise faster.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 id="card-heading">Community Learning</h3>
+          <div class="divider"></div>
+          <p id="card-paragraph">Join groups to learn, discuss, and solve doubts with peers.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-wallet"></i>
+          </div>
+          <h3 id="card-heading">Affordable Price</h3>
+          <div class="divider"></div>
+          <p id="card-paragraph">Only ₹99 for 8 months of unlimited access — no hidden fees.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3 id="card-heading">Learn Anytime</h3>
+          <div class="divider"></div>
+          <p id="card-paragraph">Study at your own pace with flexible access to all content.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3 id="card-heading">Skill Growth</h3>
+          <div class="divider"></div>
+          <p id="card-paragraph">Focus on practical skills to prepare for jobs and internships.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- about end -->
+
+  <!-- community section start -->
+  <section class="section newsletter" id="community" aria-label="newsletter"
+    style="background-image: url('./assets/images/community.png')">
+    <div class="container">
+      <p class="section-subtitle" style="color: gray;">
+        Join a growing community to collaborate, <br> share ideas, ask questions, and get support.
+      </p>
+
+      <h2 class="h2 section-title">
+        Join <b style="color: #894dff;">Our</b> Community
+      </h2>
+
+      <!-- Button centered -->
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfr_cdTnKeG-s1qHCxvIzBCC9BMfoL5PVUPYRzSfcnFEngv_w/viewform?usp=sharing&ouid=110114251202916321827"
+        class="join-btn" target="_blank">
+        Join Now
+      </a>
+    </div>
+  </section>
+
+
+
+
+  <!-- community section end -->
+
+  <!-- FAQs Section Start -->
+  <section></section>
+  <div class="faq-container">
+    <div class="faq-header">
+      <h2 style="font-size: 30px;">Frequently Asked <span class="accent">Questions</span></h2>
+      <p style="font-size: 17px;">Find answers to common questions about our courses and learning platform</p>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">
+          <span style="font-size: 17px;">How do I access the courses after purchasing?</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p style="font-size: 17px;">After completing your purchase, you'll receive an email with login credentials.
+            You can immediately access all purchased courses through our learning portal by logging in with these
+            credentials.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span style="font-size: 17px;">Are the courses self-paced or scheduled?</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p style="font-size: 17px;">All our courses are completely self-paced. You can learn at your own convenience
+            and schedule. There are no deadlines for course completion, so you can take as much time as you need.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span style="font-size: 17px;">What's included in the premium membership?</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p style="font-size: 17px;">Our premium membership gives you access to all 40+ courses, downloadable
+            resources, completion certificates, priority support, and exclusive community channels for networking and
+            discussion with other learners.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-contact">
+      <p>Still have questions? We're here to help!</p>
+      <a href="https://wa.me/919561768395" class="contact-button">Contact Support</a>
+    </div>
+  </div>
+  </section>
+  <!-- FAQs Section end -->
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+      <a href="#" class="logo">Jilani School</a>
+
+      <ul class="footer-list">
+        <li><a href="courses.html" class="footer-link" target="_self">courses</a></li>
+        <li><a href="#community" class="footer-link">community</a></li>
+        <li><a href="pricing.html" class="footer-link" target="_self">Register</a></li>
+      </ul>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          © 2025 Jilani School
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+    <ion-icon name="arrow-up"></ion-icon>
+  </a>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

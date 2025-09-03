@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JilaniSchool</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/svg+xml" />
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- 
+    - preload images
+  -->
+  <!-- <link rel="preload" as="image" href="./assets/images/hero-banner.png" /> -->
+
+<style>
+        .pricing-section * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .pricing-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            color: #333;
+            padding: 80px 20px;
+        }
+        
+        .pricing-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .pricing-section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .pricing-section-header h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .pricing-section-header p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .pricing-cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .pricing-plan-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+            flex: 1;
+            min-width: 320px;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .pricing-plan-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+        
+        .pricing-plan-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-plan-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-plan-subtitle {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+        }
+        
+        .pricing-plan-price {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-price-free {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #894dff;
+        }
+        
+        .pricing-price-premium {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ff6b6b;
+        }
+        
+        .pricing-amount {
+            font-size: 3.5rem;
+            line-height: 1;
+        }
+        
+        .pricing-duration {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+        
+        .pricing-plan-features {
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+        
+        .pricing-feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .pricing-feature-icon {
+            width: 24px;
+            height: 24px;
+            background: #894dff;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 12px;
+        }
+        
+        .pricing-premium-feature .pricing-feature-icon {
+            background: #ff6b6b;
+        }
+        
+        .pricing-plan-button {
+            display: block;
+            text-align: center;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        
+        .pricing-btn-free {
+            background: #894dff;
+            color: white;
+        }
+        
+        .pricing-btn-free:hover {
+            background: #7339e0;
+        }
+        
+        .pricing-btn-premium {
+            background: #ff6b6b;
+            color: white;
+        }
+        
+        .pricing-btn-premium:hover {
+            background: #ff5252;
+        }
+        
+        .pricing-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .pricing-badge-free {
+            background: rgba(137, 77, 255, 0.15);
+            color: #894dff;
+        }
+        
+        .pricing-badge-premium {
+            background: rgba(255, 107, 107, 0.15);
+            color: #ff6b6b;
+        }
+        
+        .pricing-options-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .pricing-option-tag {
+            background: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-cards-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .pricing-plan-card {
+                width: 100%;
+            }
+            
+            .pricing-section-header h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style></head>
+
+<body id="top">
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+      <h1>
+        <a href="index.html" class="logo">JilaniSchool</a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="index.html" class="logo">JilaniSchool</a>
+
+          <button class="nav-close-btn" aria-label="Close menu" data-nav-toggler>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-toggler>About Us</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="pricing.html" class="navbar-link" data-nav-toggler>Pricing</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="courses.html" class="navbar-link" data-nav-toggler>courses</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-toggler>Community</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#"
+          class="header-action-btn login-btn" target="_self">
+          <ion-icon name="person-add-outline" aria-hidden="true"></ion-icon>
+          <span class="span">Register now</span>
+        </a>
+
+        <button class="header-action-btn nav-open-btn" aria-label="Open menu" data-nav-toggler>
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+      </div>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+
+<section class="pricing-section">
+        <div class="pricing-container">
+            <div class="pricing-section-header">
+                <h1 style="margin-top: 40px; font-size: 40px;">Choose Your <b style="color: #894dff;">Learning</b> Plan</h1>
+                <p style="font-size: 15px; margin-top:10px;">Select the option that best fits your learning goals and budget</p>
+            </div>
+            
+            <div class="pricing-cards-container">
+                <!-- Free Access Card -->
+                <div class="pricing-plan-card">
+                    <div class="pricing-badge pricing-badge-free">Try Once</div>
+                    <div class="pricing-plan-header">
+                        <h3 class="pricing-plan-title">Free Access</h3>
+                        <p class="pricing-plan-subtitle">Develop your skills at zero cost</p>
+                    </div>
+                    
+                    <div class="pricing-plan-price">
+                        <div class="pricing-price-free">
+                            <span class="pricing-amount">₹0</span>
+                        </div>
+                        <p class="pricing-duration">Free forever</p>
+                    </div>
+                    
+                    <div class="pricing-plan-features">
+                        <div class="pricing-feature-item">
+                            <div class="pricing-feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Access to 8 course videos</span>
+                        </div>
+                        
+                        <div class="pricing-feature-item">
+                            <div class="pricing-feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Peer-learning community</span>
+                        </div>
+                        
+                        <div class="pricing-feature-item">
+                            <div class="pricing-feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Live learning events</span>
+                        </div>
+                        
+                        <div class="pricing-feature-item">
+                            <div class="pricing-feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Basic learning resources</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://superprofile.bio/course/a257f177-716b-4830-8e1c-7158f4f976dd" class="pricing-plan-button pricing-btn-free">Join FREE</a>
+                </div>
+                
+                <!-- Premium Access Card -->
+                <div class="pricing-plan-card">
+                    <div class="pricing-badge pricing-badge-premium">Best Value</div>
+                    <div class="pricing-plan-header">
+                        <h3 class="pricing-plan-title">Premium Access</h3>
+                        <p class="pricing-plan-subtitle">Everything you need to level up your tech skills</p>
+                    </div>
+                    
+                    <div class="pricing-plan-price">
+                        <div class="pricing-price-premium">
+                            <span class="pricing-amount">₹99</span>
+                        </div>
+                        <p class="pricing-duration">One-time payment for 8 months access</p>
+                    </div>
+                    
+                    <div class="pricing-plan-features">
+                        <div class="pricing-feature-item pricing-premium-feature">
+                            <div class="pricing-feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Access to 40+ courses</span>
+                        </div>
+                        
+                        <div class="pricing-feature-item pricing-premium-feature">
+                            <div class="pricing-feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Completion certificates</span>
+                        </div>
+                        
+                        <div class="pricing-feature-item pricing-premium-feature">
+                            <div class="pricing-feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Resources, templates & cheat sheets</span>
+                        </div>
+                        
+                        <div class="pricing-feature-item pricing-premium-feature">
+                            <div class="pricing-feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Premium live learning & community channels</span>
+                        </div>
+                        
+                        <div class="pricing-feature-item pricing-premium-feature">
+                            <div class="pricing-feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Priority support</span>
+                        </div>
+                    </div>
+                    
+                    <a href="courses.html" class="pricing-plan-button pricing-btn-premium">Join Premium</a>
+                </div>
+            </div>
+            
+            <div class="pricing-options-container">
+                <div class="pricing-option-tag">Curated YT Videos
+                </div>
+                <div class="pricing-option-tag">Notes</div>
+                <div class="pricing-option-tag">Peer Community</div>
+                <div class="pricing-option-tag">Resources</div>
+            </div>
+        </div>
+    </section>
+ <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+      <a href="index.html" class="logo">Jilani School</a>
+
+      <ul class="footer-list">
+        <li><a href="courses.html" class="footer-link">courses</a></li>
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfr_cdTnKeG-s1qHCxvIzBCC9BMfoL5PVUPYRzSfcnFEngv_w/viewform?usp=sharing&ouid=110114251202916321827" class="footer-link">community</a></li>
+        <li><a href="#" class="footer-link">Register</a></li>
+      </ul>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          © 2025 Jilani School
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+    <ion-icon name="arrow-up"></ion-icon>
+  </a>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+    <script>
+        // Simple animation for the pricing cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.pricing-plan-card');
+            
+            cards.forEach((card, index) => {
+                // Add delay for staggered animation
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 200 * index);
+            });
+        });
+    </script>
+</body>
+
+</html>
