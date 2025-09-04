@@ -6,6 +6,148 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JilaniSchool</title>
+<style>
+  /* ==============================
+   Problem Section Styles (Unique)
+   ============================== */
+.mmp-problem-section {
+    background-color: white;
+    border-radius: 16px;
+    padding: 40px;
+    margin: 40px auto; /* center with auto left/right */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eaeaea;
+    max-width: 1200px; /* keep section neat */
+}
+
+.mmp-problem-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.mmp-problem-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 550px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    background: #fafafa;
+    margin: 0 15px; /* margin left/right */
+}
+
+/* First card = center align list */
+.mmp-problem-card:first-child ul {
+    text-align: center;
+    padding-left: 0;
+}
+
+.mmp-problem-card:first-child li {
+    padding-left: 0;
+    list-style: none;
+    position: relative;
+    margin: 10px 0;
+}
+
+.mmp-problem-card:first-child li::before {
+    display: none; /* hide bullet for center items */
+}
+
+/* Second card = normal left alignment */
+.mmp-problem-card:last-child ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.mmp-problem-card:last-child li {
+    padding-left: 25px;
+}
+
+.mmp-problem-card:last-child li::before {
+    content: "•";
+    color: #4b6cb7;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+/* ==============================
+   Solution Section Styles (Unique)
+   ============================== */
+.mmp-solution-section {
+    background: #e8ecf9;  
+    padding: 30px 10px;   
+    max-width: 1200px;
+    margin: 40px auto; /* margin left/right */
+    border-radius: 16px;
+}
+
+.mmp-solution-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.mmp-solution-text {
+    max-width: auto;
+    margin-left: 15px;
+}
+
+.mmp-solution-text h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.mmp-solution-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mmp-solution-text ul li {
+    margin: 12px 0;
+    padding-left: 28px;
+    position: relative;
+    font-size: 16px;
+}
+
+.mmp-solution-text ul li::before {
+    content: "✔";
+    color: #2c6bed;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* ==============================
+   Responsive Styles (Unique)
+   ============================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .mmp-problem-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mmp-problem-card {
+        min-width: 100%;
+        margin: 10px 0;
+    }
+    
+    .mmp-problem-section, 
+    .mmp-solution-section {
+        padding: 25px;
+    }
+}
+
+</style>
 
   <!-- 
     - favicon
@@ -125,6 +267,59 @@
       </div>
     </div>
   </section>
+
+
+<h1 style="font-size: 45px; text-align:center; margin-top:20px; color:black;">
+  <b style="color: #894dff;">The</b> Problem
+</h1>
+
+<!-- Problem Section -->
+<section class="mmp-problem-section">
+  <div class="mmp-problem-container">
+    <div class="mmp-problem-content">
+      <div class="mmp-problem-card">
+        <h3><i class="fas fa-exclamation-circle"></i> Student Struggles</h3>
+        <ul>
+          <li>Students waste hours searching for best YouTube courses.</li>
+          <li>Too many random videos → confusion & no structured roadmap.</li>
+          <li>Expensive courses (Coursera, Udemy, Scaler) → not affordable for all.</li>
+        </ul>
+      </div>
+      <div class="mmp-problem-card">
+        <h3><i class="fas fa-user-slash"></i> Learning Gaps</h3>
+        <ul>
+          <li>Lack of organized notes → incomplete learning.</li>
+          <li>No peer learning → students study alone without guidance.</li>
+          <li>Inconsistent learning → low motivation, dropouts.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Solution Section -->
+<section class="mmp-solution-section">
+  <div class="mmp-solution-container">
+    <div class="mmp-solution-content">
+      <div class="mmp-solution-text">
+        <h2 style="font-size: 40px; margin-bottom: 15px; color:#894dff;">The Solution</h2>
+        <p style="font-size:18px;">EduTech Curated Learning Hub Offers:</p>
+        <ul>
+          <li><b>Handpicked YouTube videos</b> structured into full courses.</li>
+          <li><b>Encrypted, organized notes</b> for subscribers only.</li>
+          <li><b>Affordable at just ₹199/month</b> → budget-friendly for students.</li>
+          <li><b>Discord community</b> for peer-to-peer learning & discussions.</li>
+          <li>Future add-ons → Mentorship, resume reviews, mock interviews.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
   <!-- 
         - #ABOUT
       -->
